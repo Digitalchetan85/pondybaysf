@@ -132,14 +132,14 @@ const Contact = () => {
                     <Col md={10} xs={10}>
                       <h3 className="text-white">Our Address</h3>
                       <p className="lh-base">
-                        10/199 Shivanahalli, Jakkur Main Road,
-                        <br /> Yelahanka, Bengaluru-560064.
+                        No.6, 2nd cross, (Next to Sangeetha Mobiles), 
+                        <br /> Horamavu Main Road, Bangalore - 560043
                         
                       </p>
                     </Col>
                   </Row>
                 </div>
-                <div className="p-3 pt-md-0 pb-md-5 ps-md-5 pe-md-5">
+                {/* <div className="p-3 pt-md-0 pb-md-5 ps-md-5 pe-md-5">
                   <Row>
                     <Col md={2} xs={2} className="align-self-center">
                       <div className="text-center">
@@ -154,7 +154,7 @@ const Contact = () => {
                       </p>
                     </Col>
                   </Row>
-                </div>
+                </div> */}
                 <div className="p-3 pt-md-0 pb-md-5 ps-md-5 pe-md-5">
                   <Row>
                     <Col md={2} xs={2} className="align-self-center">
@@ -165,8 +165,8 @@ const Contact = () => {
                     <Col md={10} xs={10}>
                       <h3 className="text-white">Contact</h3>
                       <p className="lh-base">
-                        <strong> Phone: </strong>+91 96062 89999 <br />
-                        <strong>E-Mail: </strong> grademaxconcrete@gmail.com
+                        <strong> Phone: </strong>+91 96777 73964 <br />
+                        <strong>E-Mail: </strong> info@pondybaysf.com
                       </p>
                     </Col>
                   </Row>

@@ -3,8 +3,7 @@ import { Card, Row, Button, Container, Col, Image } from "react-bootstrap"
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addToCart } from '../../Store/cartSlice';
-import sampleFish from "../../Images/Gallery/sample.png";
-
+import sampleFish from "../../Images/products/vanjaram/image-1.png";
 
 const VanjaramFish = (props) => {
   const history = useNavigate();

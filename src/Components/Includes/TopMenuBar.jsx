@@ -28,8 +28,8 @@ const TopMenuBar = () => {
 
             <Col md={6}>
               <div className="text-center text-md-end">
-                <a className="nav-link p-0 ps-2 pe-2" href="tel:09513636036">
-                  <i className="fas fa-phone-volume"></i> +91 95136 36036
+                <a className="nav-link p-0 ps-2 pe-2" href="tel:09677773964">
+                  <i className="fas fa-phone-volume"></i> +91 96777 73964
                 </a>
               </div>
             </Col>

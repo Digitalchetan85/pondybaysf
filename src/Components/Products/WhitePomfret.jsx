@@ -3,8 +3,7 @@ import { Card, Row, Button, Container, Col, Image } from "react-bootstrap"
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addToCart } from '../../Store/cartSlice';
-import sampleFish from "../../Images/Gallery/sample.png";
-
+import sampleFish from "../../Images/products/white-pomfret/image-1.png";
 
 const WhitePomfretFish = (props) => {
   const history = useNavigate();
@@ -62,7 +61,7 @@ const WhitePomfretFish = (props) => {
             </Col>
             <Col md={8}>
               <div className="">
-                <h2 className="pt-2 pb-2">Vanjaram Fish</h2>
+                <h2 className="pt-2 pb-2">White Promfet Fish</h2>
                 <p className="">
                   <del className="">₹399 /500g</del> ₹275 /500g
                 </p>

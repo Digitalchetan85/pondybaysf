@@ -3,13 +3,13 @@ import { Col, Container, Row, Image } from 'react-bootstrap';
 import OwlCarousel from "react-owl-carousel2";
 import "react-owl-carousel2/src/owl.carousel.css";
 import "react-owl-carousel2/src/owl.theme.default.css";
-import Image1 from "../../images/slider/image-1.png";
+import Image1 from "../images/slider/image-1.png";
 
 const Testimonials = () => {
     const associations = [
         {
           id: 1,
-          ImageUrl: Image1,
+          ImageUrl: Image1  ,
           alt: "",
         },
         // {

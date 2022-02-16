@@ -5,8 +5,7 @@ import AboutImage from "../../Images/slider/Front-Page.png";
 import { useDispatch } from 'react-redux';
 import ProductListing from './ProductListing';
 import { fetchAsyncProducts, fetchAsyncUsers } from '../../Store/Products/ProductSlice';
-import axios from 'axios';
-import Testimonials from '../Includes/Testimonials';
+// import Testimonials from '../Includes/Testimonials';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -35,7 +34,7 @@ const Home = () => {
                 <Button
                   className="btn btn-success text-white mt-2"
                   as={Link}
-                  to="/about"
+                  to="/products"
                 >
                   SHOP NOW
                 </Button>
@@ -196,7 +195,7 @@ const Home = () => {
             <Col md={5}>
               <div className="text-center">
                 <h2 className="text-secondary">
-                  Apply Coupen Code at Checkout
+                  Apply Coupon Code at Checkout
                 </h2>
               </div>
             </Col>
@@ -209,7 +208,7 @@ const Home = () => {
         </Container>
       </div>
 
-      <Testimonials />
+      {/* <Testimonials /> */}
   </div>
   );
 };

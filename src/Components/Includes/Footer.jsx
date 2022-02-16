@@ -22,44 +22,44 @@ const Footer = () => {
             </Col>
             <Col md={3}>
               <div className="">
-                <h2 className="pt-2 pb-2">Quick Links</h2>
-                <ul>
-                  <li>
-                    <Link to="/">Home</Link>
+                <h2 className="pt-2 pb-2 text-center">Quick Links</h2>
+                <ul className="">
+                  <li className="">
+                    <Link to="/home">Home</Link>
                   </li>
                   <li>
-                    <Link to="/">About</Link>
+                    <Link to="/about">About</Link>
                   </li>
+
                   <li>
-                    <Link to="/">Career</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Contact Us</Link>
+                    <Link to="/contact">Contact Us</Link>
                   </li>
                 </ul>
               </div>
             </Col>
             <Col md={3}>
               <h2 className="pt-2 pt-2 ">Home Delivery</h2>
+              <a href="tel:09677773964">
               <i className="fa fa-phone mx-2 text-primary"></i>
-              <i className="fab fa-whatsapp mx-2 text-primary"></i>
+                    </a>
+                    <a href="tel:09677773964">
+                    <i className="fab fa-whatsapp mx-2 text-primary"></i>
+                    </a>
+              
               <i className="fas fa-moped mx-2"></i>
-            </Col> 
+            </Col>
             <Col md={3}>
               <h2 className="pt-2 pb-2 text-center text-md-start">
-                Recent News
+                Websites
               </h2>
-              <ul>
-                <li>
-                  <Link to="/"></Link>Lorem Ipsum
-                </li>
-                <li>
-                  <Link to="/"></Link>Lorem Ipsum
-                </li>
-                <li>
-                  <Link to="/"></Link>Lorem Ipsum
-                </li>
-              </ul>
+              < a href="info@pondybaysf.com">
+              <i className="fas fa-envelope mx-2"></i>
+                 </a>
+                 < a href="info@pondybaysf.com">
+                 <i className="fa fa-globe mx-2"></i>
+                 </a>
+                 <h6>www.pondybaysf.com</h6>
+                 <h6>info@pondybaysf.com</h6>
             </Col>
           </Row>
           <div className="border-top border-light">

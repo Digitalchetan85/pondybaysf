@@ -2,8 +2,8 @@ import React from "react";
 import { Card, Row, Button, Container, Col, Image } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addToCart } from "../../Store/cartSlice";
-import sampleFish from "../../Images/Gallery/sample.png";
+  import { addToCart } from "../../Store/cartSlice";
+  import sampleFish from "../../Images/products/ayala-fish/image-1.png";
 
 const AyalaFish = (props) => {
   const history = useNavigate();
