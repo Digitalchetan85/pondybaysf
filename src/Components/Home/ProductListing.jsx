@@ -6,14 +6,14 @@ import { getAllProducts } from "../../Store/Products/ProductSlice";
 
 const ProductListing = () => {
     const products = useSelector(getAllProducts)
-    console.log(products)
+    // console.log(products)
   return (
     <div id="fishdata" className="pt-3 pb-3 pt-md-5 pb-md-5 bg-light">
       <Container>
         <h2 className="pb-2 text-center text-primary">Best Selling Seafoods</h2>
         <Row className="g-3">
           {products.map((item) => (
-            <Col md={4} key={item.id}>
+            <Col md={3} key={item.id}>
               <Card
                 className="m-1 text-center shadow link"
                 as={Link}
@@ -26,7 +26,7 @@ const ProductListing = () => {
                   className="img-fluid"
                 />
                 <Card.Body>
-                  <Card.Title>{item.productTitle}</Card.Title>
+                  {/* <Card.Title>{item.productTitle}</Card.Title> */}
                   <div className="d-flex justify-content-center">
                     <div>
                       <Card.Text className="text-decoration-line-through">

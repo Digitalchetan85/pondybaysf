@@ -10,32 +10,34 @@ const EditProduct = () => {
   const { id } = useParams();
 
   const [values, Setvalues] = useState();
+  // const [CardURL, SetCardURL] = useState();
 
   useEffect(() => {
+    // console.log("path =","/getproductbyid/" + id)
     axios
       .get(
-        "http://localhost/pondypay/api/getdatabyid.php?id=" + id
+        "/products/" + id
       )
       .then((response) => {
-        console.log(response.data[0]);
-        Setvalues(response.data[0]);
-        console.log(values);
+        // console.log(response.data.data[0]);
+        Setvalues(response.data.data[0]);
+        // console.log(values);
         document.getElementById("productTitle").value =
-          response.data[0].productTitle;
-        document.getElementById("price").value = response.data[0].price;
-        document.getElementById("price1").value = response.data[0].price1;
-        document.getElementById("imgURL").value = response.data[0].imgURL;
-        document.getElementById("alt").value = response.data[0].alt;
+          response.data.data[0].productTitle;
+        document.getElementById("price").value = response.data.data[0].price;
+        document.getElementById("price1").value = response.data.data[0].price1;
+        document.getElementById("imgURL").value = response.data.data[0].imgURL;
+        document.getElementById("alt").value = response.data.data[0].alt;
         document.getElementById("description").value =
-          response.data[0].description;
+          response.data.data[0].description;
         
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [id]);
 
-  //   console.log(values)
+    // console.log("after", values)
 
   return (
     <div>
@@ -81,13 +83,13 @@ const EditProduct = () => {
                 }}
                 onSubmit={(values, { setSubmitting }) => {
                   setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    const data = JSON.stringify(values, null, 2);
+                    // alert(JSON.stringify(values, null, 2));
+                    const data = values;
                     console.log(data);
 
                     axios
-                      .post(
-                        "http://localhost/pondypay/api/update.php",
+                      .patch(
+                        "/products",
                         data
                       )
                       .then((response) => {
@@ -114,7 +116,7 @@ const EditProduct = () => {
                   <Form onSubmit={handleSubmit}>
                     <Row>
                       <Col md={6}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                           <Form.Label>Product Title</Form.Label>
                           <Form.Control
                             type="text"
@@ -131,7 +133,7 @@ const EditProduct = () => {
                               errors.productTitle}
                           </Form.Text>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                           <Form.Label>Price</Form.Label>
                           <Form.Control
                             placeholder="Enter Price"
@@ -146,7 +148,7 @@ const EditProduct = () => {
                             {errors.price && touched.price && errors.price}
                           </Form.Text>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                           <Form.Label>Price1</Form.Label>
                           <Form.Control
                             placeholder="Enter Price"
@@ -161,7 +163,7 @@ const EditProduct = () => {
                             {errors.price1 && touched.price1 && errors.price1}
                           </Form.Text>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                           <Form.Label>Image URL</Form.Label>
                           <Form.Control
                             placeholder="http://localhost/pondypay/api/images/"
@@ -176,7 +178,7 @@ const EditProduct = () => {
                             {errors.imgURL && touched.imgURL && errors.imgURL}
                           </Form.Text>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                           <Form.Label>Alt Text</Form.Label>
                           <Form.Control
                             placeholder="Alt Text"
@@ -193,7 +195,7 @@ const EditProduct = () => {
                         </Form.Group>
                       </Col>
                       <Col md={6}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                           <Form.Label>Product Description</Form.Label>
                           <Form.Control
                             placeholder="Enter Description"

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
@@ -11,6 +11,8 @@ import {
 import { Link } from "react-router-dom";
 
 const Cart = () => {
+  const [coupen, setcoupen] = useState()
+  const [TotalAmount, setTotalAmount] = useState()
   const cart = useSelector((state) => state.cart);
   console.log(cart);
   const dispatch = useDispatch();
@@ -31,6 +33,15 @@ const Cart = () => {
   const handleClearCart = () => {
     dispatch(clearCart());
   };
+
+  // const coupencode = (e, amount) => {
+  //   setcoupen(e.target.value)
+
+  //   if (coupen === "abcd") {
+  //     setTotalAmount((amount))
+  //   }
+  // }
+  
   return (
     <div className="cart-container">
       <h2>Shopping Cart</h2>
@@ -38,7 +49,7 @@ const Cart = () => {
         <div className="cart-empty">
           <p>Your cart is currently empty</p>
           <div className="start-shopping">
-            <Link to="/pondybay">
+            <Link to="/products">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -69,9 +80,9 @@ const Cart = () => {
               cart.cartItems.map((cartItem) => (
                 <div className="cart-item" key={cartItem.id}>
                   <div className="cart-product">
-                    <img src={cartItem.image} alt={cartItem.name} />
+                    <img src={cartItem.imgURL} alt={cartItem.name} className="img-fluid border"/>
                     <div>
-                      <h3>{cartItem.name}</h3>
+                      <h3>{cartItem.title}</h3>
                       <p>{cartItem.desc}</p>
                       <button onClick={() => handleRemoveFromCart(cartItem)}>
                         Remove
@@ -83,7 +94,7 @@ const Cart = () => {
                     <button onClick={() => handleDecreaseCart(cartItem)}>
                       -
                     </button>
-                    <div className="count">{cartItem.cartQuantity}</div>
+                    <div className="count">{cartItem.cartQuantity}kg</div>
                     <button onClick={() => handleAddToCart(cartItem)}>+</button>
                   </div>
                   <div className="cart-product-total-price">
@@ -97,14 +108,21 @@ const Cart = () => {
               Clear Cart
             </button>
             <div className="cart-checkout">
-              <div className="subtotal">
+              <div className="subtotal py-3">
                 <span>Subtotal</span>
                 <span className="amount">Rs.{cart.cartTotalAmount}</span>
               </div>
-              <p>Taxes and shipping calculated at checkout</p>
+              {/* <div>
+                <input type="text" value={coupen} name="coupen" onChange={coupencode(cart.cartTotalAmount)} className="form-control my-2" placeholder="Apply Coupen code" />
+              </div>
+              <div className="subtotal py-3">
+                <span>Total</span>
+                <span className="amount">Rs.{TotalAmount}</span>
+              </div> */}
+              {/* <p>Taxes and shipping calculated at checkout</p> */}
               <button>Check out</button>
               <div className="continue-shopping">
-                <Link to="/pondybay">
+                <Link to="/products">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"

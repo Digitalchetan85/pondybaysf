@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container, Nav, Navbar, Image, Row, Col } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../../Images/logo.png";
 import { useSelector } from "react-redux";
-import axios from "axios";
-import { state } from "../RegisterLogin/Login";
 
 const TopMenuBar = () => {
   const { cartTotalQuantity } = useSelector((state) => state.cart);

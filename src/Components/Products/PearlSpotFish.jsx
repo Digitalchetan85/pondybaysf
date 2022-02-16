@@ -1,11 +1,12 @@
-import React from "react";
-import { Card, Row, Button, Container, Col, Image } from "react-bootstrap";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { addToCart } from "../../Store/cartSlice";
+import React from 'react';
+import { Card, Row, Button, Container, Col, Image } from "react-bootstrap"
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { addToCart } from '../../Store/cartSlice';
 import sampleFish from "../../Images/Gallery/sample.png";
 
-const AyalaFish = (props) => {
+
+const PearlSpotFish = (props) => {
   const history = useNavigate();
   const dispatch = useDispatch();
 
@@ -41,28 +42,27 @@ const AyalaFish = (props) => {
   ];
 
   const handleAddItem = (item, id) => {
-    dispatch(addToCart(item));
+    dispatch(addToCart(item))
     history("/cart");
-  };
+  } 
 
   return (
     <div className="">
-      <div id="sample1" className="pt-3 pb-3 pt-md-5 pb-md-2">
+      <div id="sample1" className="pt-3 pb-3 pt-md-5 pb-md-5">
         <Container>
-          <Row className="justify-content-center">
+          <Row>
             <Col md={4}>
               <div className="text-center">
                 <Image
                   src={sampleFish}
                   alt="Sample Fish"
                   className="img-fluid rounded shadow"
-                  style={{height:'250px', width:'250px'}}
                 />
               </div>
             </Col>
             <Col md={8}>
               <div className="">
-                <h2 className="pt-2 pb-2">Ayala Fish</h2>
+                <h2 className="pt-2 pb-2">Vanjaram Fish</h2>
                 <p className="">
                   <del className="">₹399 /500g</del> ₹275 /500g
                 </p>
@@ -78,7 +78,9 @@ const AyalaFish = (props) => {
                 </p>
               </div>
 
-              <div className="pt-3">{/* <SampleTabs /> */}</div>
+              <div className="pt-3">
+                {/* <SampleTabs /> */}
+              </div>
             </Col>
           </Row>
         </Container>
@@ -89,15 +91,13 @@ const AyalaFish = (props) => {
             {initialData.map((item) => (
               <Col md={3} key={item.id} className="align-self-center">
                 <Card className="m-1 text-center shadow link">
-                  <div className="text-center">
-                    <Card.Img
-                      variant="top"
-                      src={item.imgURL}
-                      alt={item.alt}
-                      className="img-fluid text-center"
-                      style={{ height: "150px", width: "200px" }}
-                    />
-                  </div>
+                  <Card.Img
+                    variant="top"
+                    src={item.imgURL}
+                    alt={item.alt}
+                    className="img-fluid text-center"
+                    style={{height:'200px', width:'300px'}}
+                  />
                   <Card.Body>
                     <Card.Title className="pt-2 pb-2">{item.title}</Card.Title>
                     <div className="d-flex justify-content-center pb-3">
@@ -107,13 +107,13 @@ const AyalaFish = (props) => {
                         </Card.Text>
                       </div>
                     </div>
-                    <Button
-                      variant="primary"
-                      className="text-white"
-                      onClick={() => handleAddItem(item)}
-                    >
-                      Add to Cart
-                    </Button>
+                      <Button
+                        variant="primary"
+                        className="text-white"
+                        onClick={() => handleAddItem(item)}
+                      >
+                        Add to Cart
+                      </Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -125,4 +125,4 @@ const AyalaFish = (props) => {
   );
 };
 
-export default AyalaFish;
+export default PearlSpotFish;

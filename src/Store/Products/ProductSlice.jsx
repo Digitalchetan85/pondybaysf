@@ -5,23 +5,12 @@ export const fetchAsyncProducts = createAsyncThunk(
   "products/fetchAsyncMovies",
   async () => {
     const response = await axios.get("/products");
-    return response.data.result;
+    return response.data.message;
   }
 );
 
-export const fetchAsyncUsers = createAsyncThunk(
-    "products/fetchUsers",
-    async () => {
-      const response = await axios.get("/login");
-      console.log(response)
-      return response.data;
-    }
-  );
-
 const initialState = {
   products: [],
-  login: {},
-  add_Item: []
 };
 
 const productSlice = createSlice({
@@ -43,13 +32,9 @@ const productSlice = createSlice({
       [fetchAsyncProducts.rejected] : () => {
           // console.log("Rejected");
       },
-      [fetchAsyncUsers.fulfilled] : (state, { payload }) => {
-          // console.log("Fetched Successfully.");
-          return { ...state, login: payload };
-      },
   }
 });
 
-export const { addProducts } = productSlice.actions;
+export const { addProducts, singleProduct } = productSlice.actions;
 export const getAllProducts = (state) => state.products.products;
 export default productSlice.reducer;
