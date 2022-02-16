@@ -22,6 +22,10 @@ $black-color: #000;
 $tertiary-color: #9D9E9E;
 $dark-color: #001524;
 
+p {
+  text-align: justify !important;
+}
+
 .SRLDownloadButton {
     display: none !important;
 }

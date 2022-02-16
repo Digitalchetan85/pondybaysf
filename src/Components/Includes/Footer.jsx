@@ -3,8 +3,6 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import FooterLogo from "../../Images/footer-logo.png";
 
-
-
 const Footer = () => {
   return (
     <div>
@@ -14,6 +12,12 @@ const Footer = () => {
             <Col md={3} className="align-self-center">
               <div className="text-center">
                 <Image src={FooterLogo} alt="" className="img-fluid" />
+                <address>
+                  <p>
+                    No.6, 2nd cross, (Next to Sangeetha Mobiles), Horamavu Main
+                    Road, Bangalore - 560043
+                  </p>
+                </address>
               </div>
             </Col>
             <Col md={3}>
@@ -21,13 +25,10 @@ const Footer = () => {
                 <h2 className="pt-2 pb-2">Quick Links</h2>
                 <ul>
                   <li>
-                    <Link to="/">Latest Events</Link>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <Link to="/">Terms and conditions</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Privacy Policy</Link>
+                    <Link to="/">About</Link>
                   </li>
                   <li>
                     <Link to="/">Career</Link>
@@ -39,20 +40,11 @@ const Footer = () => {
               </div>
             </Col>
             <Col md={3}>
-              <h2 className="pt-2 pt-2">Latest Posts</h2>
-              <ul>
-                <li>
-                  <Link to="/"></Link>Lorem Ipsum
-                </li>
-                <li>
-                  <Link to="/"></Link>Lorem Ipsum
-                </li>
-                <li>
-                  <Link to="/"></Link>Lorem Ipsum
-                </li>
-                
-              </ul>
-            </Col>
+              <h2 className="pt-2 pt-2 ">Home Delivery</h2>
+              <i className="fa fa-phone mx-2 text-primary"></i>
+              <i className="fab fa-whatsapp mx-2 text-primary"></i>
+              <i className="fas fa-moped mx-2"></i>
+            </Col> 
             <Col md={3}>
               <h2 className="pt-2 pb-2 text-center text-md-start">
                 Recent News
@@ -67,7 +59,6 @@ const Footer = () => {
                 <li>
                   <Link to="/"></Link>Lorem Ipsum
                 </li>
-                
               </ul>
             </Col>
           </Row>
@@ -76,7 +67,11 @@ const Footer = () => {
               <Col md={12}>
                 <p className="text-center text-light m-0 pt-2 pb-1">
                   Copy Rights reserved by Pondy Bay. Developed by{" "}
-                  <a href="https://shanthaswebz.com" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://shanthaswebz.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Shanthas Webz.
                   </a>
                 </p>

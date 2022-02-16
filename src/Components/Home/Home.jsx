@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import ProductListing from './ProductListing';
 import { fetchAsyncProducts, fetchAsyncUsers } from '../../Store/Products/ProductSlice';
 import axios from 'axios';
+import Testimonials from '../Includes/Testimonials';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -208,7 +209,7 @@ const Home = () => {
         </Container>
       </div>
 
-      {/* <Testimonials /> */}
+      <Testimonials />
   </div>
   );
 };

@@ -1,17 +1,17 @@
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
-import Slide1 from "../../Images/Gallery/sample.png";
+import Slide1 from "../../Images/Front-Page-image-011.png";
 
 const About = () => {
   return (
     <div>
       <div id="about-us" className="bg-primary">
         <Container>
-          <Row>
+          <Row>   
             <Col md={12}>
               <div className="pt-5 pb-5">
                 <h2 className="text-center text-white">
-                  About Pondy Bay See Foods
+                  About Pondy Bay Sea Foods
                 </h2>
               </div>
             </Col>
@@ -22,41 +22,15 @@ const About = () => {
         <Container>
           <Row>
             <Col md={8} className="align-self-center">
+              <h2 className="">We Are Your Favourite Store.....</h2>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+              Pondy Bay seafood comes with 30 plus years of expertise in the field of fishing. Our seafood is a product of our catch from launch boats & small daily fishing boats. Our catch from the Sea Bay of Puducherry (Pondicherry) which is also known as Bay of Bengal.
               </p>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+              Pondy Bay seafood provides only the freshest catch from the bays of Puducherry. Our fishing boats originate from the harbors of Puducherry, which is home to the finest quality of sustainable fish in South India. We’re supplying fresh seafood to restaurants and Homes all the way from Puducherry to Bangalore.
               </p>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+              Our focus on quality and service has helped us to grow from a single ‘online’ store from Puducherry to covering major locations, including Tindivanam, Vellore, Ambur, Hosur, Bangalore & Tumkur.
               </p>
             </Col>
             <Col md={4} className="align-self-center">
@@ -69,7 +43,7 @@ const About = () => {
           </Row>
         </Container>
       </div>
-      <div className="pt-3 pb-3 pt-md-5 pb-md-5 bg-light">
+      {/* <div className="pt-3 pb-3 pt-md-5 pb-md-5 bg-light">
         <Container>
           <Row className="justify-content-center">
             <Col md={6}>
@@ -108,7 +82,7 @@ const About = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
       {/* <div className="pt-3 pb-3 pt-md-5 pb-md-5">
         <Container>
           <h2 className="text-center text-secondary pt-2 pb-2">Our Team</h2>
